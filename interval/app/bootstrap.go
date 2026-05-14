@@ -5,10 +5,11 @@ import (
 	"stugo/interval/health"
 )
 
-func Start() {
+func Start(port string, mode string) {
+	gin.SetMode(mode)
 	var app = gin.Default()
 
 	health.Register(app)
 
-	app.Run()
+	app.Run(":" + port)
 }
