@@ -10,5 +10,5 @@ func main() {
 
 	cfg := config.Get()
 
-	app.Start(cfg.Port, cfg.Mode)
+	app.Start(cfg)
 }
