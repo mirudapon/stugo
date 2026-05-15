@@ -12,7 +12,7 @@ type Config struct {
 	Mode string
 }
 
-func Load() {
+func Load() *Config {
 	// .env.local overrides .env; godotenv.Load skips vars that already exist,
 	// so loading .env.local first gives it priority.
 	_ = godotenv.Load(".env.local")
@@ -22,6 +22,8 @@ func Load() {
 		Port: getEnv("APP_PORT", "8080"),
 		Mode: getEnv("APP_MODE", "debug"),
 	}
+
+	return cfg
 }
 
 func Get() *Config {

@@ -6,9 +6,7 @@ import (
 )
 
 func main() {
-	config.Load()
-
-	cfg := config.Get()
+	cfg := config.Load()
 
 	app.Start(cfg)
 }
