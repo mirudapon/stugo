@@ -8,9 +8,9 @@ import (
 
 func Start(cfg *config.Config) {
 	gin.SetMode(cfg.Mode)
-	var app = gin.Default()
+	r := gin.Default()
 
-	health.Register(app)
+	health.Register(r)
 
-	app.Run(":" + cfg.Port)
+	r.Run(":" + cfg.Port)
 }
