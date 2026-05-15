@@ -2,7 +2,7 @@ package app
 
 import (
 	"github.com/gin-gonic/gin"
-	"stugo/interval/health"
+	"stugo/internal/health"
 )
 
 func Start(port string, mode string) {

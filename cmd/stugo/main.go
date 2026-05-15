@@ -1,8 +1,8 @@
 package main
 
 import (
-	"stugo/interval/app"
-	"stugo/interval/config"
+	"stugo/internal/app"
+	"stugo/internal/config"
 )
 
 func main() {
