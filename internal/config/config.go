@@ -9,7 +9,6 @@ var cfg *Config
 
 type Config struct {
 	Port string
-	Mode string
 }
 
 func Load() *Config {
@@ -20,7 +19,6 @@ func Load() *Config {
 
 	cfg = &Config{
 		Port: getEnv("APP_PORT", "8080"),
-		Mode: getEnv("APP_MODE", "debug"),
 	}
 
 	return cfg
